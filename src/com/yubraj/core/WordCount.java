@@ -29,14 +29,16 @@ public class WordCount {
 
     private void suffle_sort() throws IOException {
         for (int i = 0; i < m; i++) {
+            System.out.println("Mapper " + i + " Output");
             MapData(filePath[i]);
             SortMappedData();
-            System.out.println("Mapper " + i + " Output");
             for (KeyPair<String, Integer> kvp : kpList) {
                 System.out.println(kvp.toString());
             }
         }
     }
+
+
 
     public int getPartition(String key){
         return (int) key.hashCode() % r;

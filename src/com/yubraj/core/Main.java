@@ -15,11 +15,12 @@ import com.yubraj.core.KeyPair;
 public class Main {
     static List<KeyPair<String, Integer>> kpList = new ArrayList<KeyPair<String, Integer>>();
     static List<Group> groupByPair = new ArrayList<Group>();
+    //static String FilePath = "c:\\testData.txt";
     static String[] FilePath = {"c:\\testData.txt", "c:\\testData.txt", "c:\\testData.txt"};
 
     public static void main(String[] args) throws IOException {
 
-        WordCount wc = new WordCount(3,4,FilePath);
+        WordCount wc = new WordCount(4,3,FilePath);
 //        System.out.println("\n Initial Key Value Pair ");
 //        MapData(FilePath);
 //        SortMappedData();
