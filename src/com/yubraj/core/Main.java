@@ -15,27 +15,28 @@ import com.yubraj.core.KeyPair;
 public class Main {
     static List<KeyPair<String, Integer>> kpList = new ArrayList<KeyPair<String, Integer>>();
     static List<Group> groupByPair = new ArrayList<Group>();
-    static String FilePath = "c:\\testData.txt";
+    static String[] FilePath = {"c:\\testData.txt", "c:\\testData.txt", "c:\\testData.txt"};
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println("\n Initial Key Value Pair ");
-        MapData(FilePath);
-        SortMappedData();
-        for (KeyPair<String, Integer> kvp : kpList) {
-            System.out.println(kvp.toString());
-        }
-
-        System.out.println("\n Input for the Reducer");
-        GroupByPair();
-        for (Group gbp : groupByPair) {
-            System.out.println(gbp.toString());
-        }
-
-        System.out.println("\n Reducer Output");
-        for (Group gbp : groupByPair) {
-            System.out.println(Reducer(gbp));
-        }
+        WordCount wc = new WordCount(3,4,FilePath);
+//        System.out.println("\n Initial Key Value Pair ");
+//        MapData(FilePath);
+//        SortMappedData();
+//        for (KeyPair<String, Integer> kvp : kpList) {
+//            System.out.println(kvp.toString());
+//        }
+//
+//        System.out.println("\n Input for the Reducer");
+//        GroupByPair();
+//        for (Group gbp : groupByPair) {
+//            System.out.println(gbp.toString());
+//        }
+//
+//        System.out.println("\n Reducer Output");
+//        for (Group gbp : groupByPair) {
+//            System.out.println(Reducer(gbp));
+//        }
     }
 
     public static void MapData(String filePath) throws IOException {
@@ -57,7 +58,6 @@ public class Main {
                 gbp.addVal();
                 i++;
             }
-
             groupByPair.add(gbp);
         }
     }
