@@ -67,6 +67,6 @@ public class Main {
     }
 
     public static String Reducer(Group gbp) {
-        return "<" + gbp.getKey() + " , " + gbp.getIndexList().stream().mapToInt(i -> ((Integer) i)).sum() + " >";
+        return "< " + gbp.getKey() + " , " + gbp.getIndexList().stream().mapToInt(i -> ((Integer) i)).sum() + " >";
     }
 }

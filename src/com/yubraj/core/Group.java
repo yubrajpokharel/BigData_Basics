@@ -37,9 +37,9 @@ public class Group {
 
     @Override
     public String toString() {
-        return "<" +
+        return "< " +
                 key +
                 ", " + indexList.toString() +
-                '>';
+                " >";
     }
 }

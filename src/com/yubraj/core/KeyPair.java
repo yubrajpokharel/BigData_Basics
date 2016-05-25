@@ -26,10 +26,10 @@ public class KeyPair<k extends Comparable<k>, v> implements Comparable<KeyPair<k
 
     @Override
     public String toString() {
-        return "<" +
+        return "< " +
                 K +
                 ", " + V +
-                '>';
+                " >";
     }
 
     @Override
