@@ -30,7 +30,7 @@ public class WordCount {
     private void suffle_sort() throws IOException {
         for (int i = 0; i < m; i++) {
             System.out.println("Mapper " + i + " Output");
-            MapData(filePath[i], int index);
+            MapData(filePath[i], i);
             SortMappedData(i);
             for (List<KeyPair<String, Integer>> kvp : kpList) {
                 System.out.println(kvp.toString());
@@ -50,7 +50,8 @@ public class WordCount {
         String[] result = content.split("[-\\s]");
         for (String s : result) {
             if (s.matches("[a-zA-Z]+")) {
-                kpList.get(index).add((List<KeyPair<String, Integer>>) new KeyPair<String, Integer>(s.toLowerCase(), 1));
+
+                kpList.get(index).add((KeyPair<String, Integer>) new KeyPair<String, Integer>(s.toLowerCase(), 1));
             }
         }
     }
