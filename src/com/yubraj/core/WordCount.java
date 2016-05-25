@@ -16,8 +16,8 @@ public class WordCount {
     public int m; //no. of mapper
 
     public String[] filePath;
-    static List<KeyPair<String, Integer>> kpList = new ArrayList<KeyPair<String, Integer>>();
-    static List<Group> groupByPair = new ArrayList<Group>();
+    static List<List<KeyPair<String, Integer>>> kpList = new ArrayList<>();
+    static List<List<Group>> groupByPair = new ArrayList<>();
 
     public WordCount(int r, int m, String[] filePath) throws IOException {
         this.r = r;
@@ -31,8 +31,8 @@ public class WordCount {
         for (int i = 0; i < m; i++) {
             System.out.println("Mapper " + i + " Output");
             MapData(filePath[i]);
-            SortMappedData();
-            for (KeyPair<String, Integer> kvp : kpList) {
+            SortMappedData(i);
+            for (List<KeyPair<String, Integer>> kvp : kpList) {
                 System.out.println(kvp.toString());
             }
         }
@@ -50,17 +50,17 @@ public class WordCount {
         String[] result = content.split("[-\\s]");
         for (String s : result) {
             if (s.matches("[a-zA-Z]+")) {
-                kpList.add(new KeyPair<String, Integer>(s.toLowerCase(), 1));
+                kpList.add((List<KeyPair<String, Integer>>) new KeyPair<String, Integer>(s.toLowerCase(), 1));
             }
         }
     }
 
-    public static void GroupByPair() {
-        for (int i = 0; i < kpList.size(); i++) {
-            String currentKey = kpList.get(i).getK();
+    public static void GroupByPair(int index) {
+        for (int i = 0; i < kpList.get(index).size(); i++) {
+            String currentKey = kpList.get(index).get(i).getK();
             Group gbp = new Group(currentKey);
 
-            while (i < kpList.size() - 1 && kpList.get(i + 1).getK().equals(currentKey)) {
+            while (i < kpList.size() - 1 && kpList.get(index).get(i + 1).getK().equals(currentKey)) {
                 gbp.addVal();
                 i++;
             }
@@ -68,8 +68,8 @@ public class WordCount {
         }
     }
 
-    public static void SortMappedData() {
-        Collections.sort(kpList, (a, b) -> a.getK().compareToIgnoreCase(b.getK()));
+    public static void SortMappedData(int i) {
+        Collections.sort(kpList.get(i), (a, b) -> a.getK().compareToIgnoreCase(b.getK()));
     }
 
     public static String Reducer(Group gbp) {
