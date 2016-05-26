@@ -1,3 +1,5 @@
+total Mapper : 3
+total Reducer : 7
 
 --------------------------------
 Mapper 0 Output
@@ -42,196 +44,121 @@ Mapper 2 Output
 < wat, 1 >
 --------------------------------
 From map 0 to reducer 0
+< eat, 1 >
+< sat, 1 >
 From map 0 to reducer 1
 < bat, 1 >
-From map 0 to reducer 2
-< cat, 1 >
-< cat, 1 >
-From map 0 to reducer 3
-From map 0 to reducer 4
-< eat, 1 >
-From map 0 to reducer 5
-< fat, 1 >
-From map 0 to reducer 6
-From map 0 to reducer 7
-From map 0 to reducer 8
-From map 0 to reducer 9
-From map 0 to reducer 10
-From map 0 to reducer 11
-From map 0 to reducer 12
-< mat, 1 >
-< mat, 1 >
-From map 0 to reducer 13
-From map 0 to reducer 14
-From map 0 to reducer 15
 < pat, 1 >
-From map 0 to reducer 16
-From map 0 to reducer 17
+From map 0 to reducer 2
+< fat, 1 >
+< mat, 1 >
+< mat, 1 >
+From map 0 to reducer 3
+< cat, 1 >
+< cat, 1 >
+From map 0 to reducer 4
+From map 0 to reducer 5
 < rat, 1 >
-From map 0 to reducer 18
-< sat, 1 >
-From map 0 to reducer 19
+From map 0 to reducer 6
 From map 1 to reducer 0
+< eat, 1 >
 From map 1 to reducer 1
 < bat, 1 >
+< pat, 1 >
+< pat, 1 >
 From map 1 to reducer 2
+< mat, 1 >
 From map 1 to reducer 3
 From map 1 to reducer 4
-< eat, 1 >
 From map 1 to reducer 5
-From map 1 to reducer 6
-From map 1 to reducer 7
-< hat, 1 >
-< hat, 1 >
-From map 1 to reducer 8
-From map 1 to reducer 9
-From map 1 to reducer 10
-From map 1 to reducer 11
-From map 1 to reducer 12
-< mat, 1 >
-From map 1 to reducer 13
-From map 1 to reducer 14
-< oat, 1 >
-< oat, 1 >
-From map 1 to reducer 15
-< pat, 1 >
-< pat, 1 >
-From map 1 to reducer 16
-From map 1 to reducer 17
 < rat, 1 >
-From map 1 to reducer 18
-From map 1 to reducer 19
+From map 1 to reducer 6
+< hat, 1 >
+< hat, 1 >
+< oat, 1 >
+< oat, 1 >
 From map 2 to reducer 0
+< lat, 1 >
+< sat, 1 >
+< zat, 1 >
 From map 2 to reducer 1
-From map 2 to reducer 2
-< cat, 1 >
+< pat, 1 >
 < wat, 1 >
+From map 2 to reducer 2
 From map 2 to reducer 3
+< cat, 1 >
 From map 2 to reducer 4
 From map 2 to reducer 5
-< zat, 1 >
-From map 2 to reducer 6
-From map 2 to reducer 7
-< hat, 1 >
-From map 2 to reducer 8
-From map 2 to reducer 9
-From map 2 to reducer 10
 < kat, 1 >
-From map 2 to reducer 11
-< lat, 1 >
-From map 2 to reducer 12
-From map 2 to reducer 13
-From map 2 to reducer 14
-From map 2 to reducer 15
-< pat, 1 >
-From map 2 to reducer 16
-From map 2 to reducer 17
-From map 2 to reducer 18
-< sat, 1 >
-From map 2 to reducer 19
+From map 2 to reducer 6
+< hat, 1 >
 
 
 
 --------------------------------
 Reducer Input 0
 --------------------------------
-< bat, [1, 1] >
+< eat, [1, 1] >
+< lat, [1] >
+< sat, [1, 1] >
+< zat, [1] >
 --------------------------------
 Reducer Input 1
 --------------------------------
-< rat, [1, 1] >
+< bat, [1, 1] >
+< pat, [1, 1, 1, 1] >
+< wat, [1] >
 --------------------------------
 Reducer Input 2
 --------------------------------
-< cat, [1, 1, 1] >
-< wat, [1] >
+< fat, [1] >
+< mat, [1, 1, 1] >
 --------------------------------
 Reducer Input 3
 --------------------------------
-< sat, [1, 1] >
+< cat, [1, 1, 1] >
 --------------------------------
 Reducer Input 4
 --------------------------------
-< eat, [1, 1] >
+< kat, [1] >
+< rat, [1, 1] >
 --------------------------------
 Reducer Input 5
 --------------------------------
-< fat, [1] >
-< zat, [1] >
---------------------------------
-Reducer Input 6
---------------------------------
 < hat, [1, 1, 1] >
---------------------------------
-Reducer Input 7
---------------------------------
-< kat, [1] >
---------------------------------
-Reducer Input 8
---------------------------------
-< lat, [1] >
---------------------------------
-Reducer Input 9
---------------------------------
-< mat, [1, 1, 1] >
---------------------------------
-Reducer Input 10
---------------------------------
 < oat, [1, 1] >
---------------------------------
-Reducer Input 11
---------------------------------
-< pat, [1, 1, 1, 1] >
 
 
 
 --------------------------------
 Reducer 0 output
 --------------------------------
-< bat , 2 >
+< eat , 2 >
+< lat , 1 >
+< sat , 2 >
+< zat , 1 >
 --------------------------------
 Reducer 1 output
 --------------------------------
-< rat , 2 >
+< bat , 2 >
+< pat , 4 >
+< wat , 1 >
 --------------------------------
 Reducer 2 output
 --------------------------------
-< cat , 3 >
-< wat , 1 >
+< fat , 1 >
+< mat , 3 >
 --------------------------------
 Reducer 3 output
 --------------------------------
-< sat , 2 >
+< cat , 3 >
 --------------------------------
 Reducer 4 output
 --------------------------------
-< eat , 2 >
+< kat , 1 >
+< rat , 2 >
 --------------------------------
 Reducer 5 output
 --------------------------------
-< fat , 1 >
-< zat , 1 >
---------------------------------
-Reducer 6 output
---------------------------------
 < hat , 3 >
---------------------------------
-Reducer 7 output
---------------------------------
-< kat , 1 >
---------------------------------
-Reducer 8 output
---------------------------------
-< lat , 1 >
---------------------------------
-Reducer 9 output
---------------------------------
-< mat , 3 >
---------------------------------
-Reducer 10 output
---------------------------------
 < oat , 2 >
---------------------------------
-Reducer 11 output
---------------------------------
-< pat , 4 >
