@@ -25,8 +25,8 @@
         <module name="BigData_Basics" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="BigData_Basics" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="BigData_Basics" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

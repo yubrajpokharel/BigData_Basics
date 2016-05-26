@@ -38,7 +38,7 @@ public class Main {
 //        wc1.showReducedOutput();
 
         System.out.println("\n\n------------------------------------------------------------");
-        System.out.println("------------------------------------------------------------");
+        System.out.println("----------------V 4.1----------------------------");
         System.out.println("------------------------------------------------------------\n\n");
 
         InMapperWordCount wc = new InMapperWordCount(4,3,FilePath);
