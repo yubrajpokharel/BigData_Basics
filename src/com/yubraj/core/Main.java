@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Please notice that there are only three files used in this program
  * if you want to input more than 3 nodes then please create the no. of files aslo
  * respectively. Add the files in Filepath array
+ * Output can be seen the Output.txt file in the root folder if you type yes in the console
  */
 
 public class Main {
