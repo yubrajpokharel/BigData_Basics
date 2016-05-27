@@ -20,31 +20,32 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-//        Scanner sn = new Scanner(System.in);
-//        System.out.println("Enter the no. of mapper : ");
-//        int node = sn.nextInt();
-//        System.out.println("Enter the no. of reducer : ");
-//        int reducer = sn.nextInt();
-//
-//        Operations o = new Operations();
-//        o.ask_decision();
-//        System.out.println("total Mapper : "+node);
-//        System.out.println("total Reducer : "+reducer);
-//        WordCount wc = new WordCount(reducer,node,FilePath);
+        Scanner sn = new Scanner(System.in);
+        System.out.println("Enter the no. of mapper : ");
+        int node = sn.nextInt();
+        System.out.println("Enter the no. of reducer : ");
+        int reducer = sn.nextInt();
 
-//        WordCount wc1 = new WordCount(4,3,FilePath);
-//        wc1.manage_partition();
-//        wc1.group_by_keys();
-//        wc1.showReducedOutput();
+        Operations o = new Operations();
+        o.ask_decision();
+        System.out.println("total Mapper : "+node);
+        System.out.println("total Reducer : "+reducer);
+        WordCount wc1 = new WordCount(reducer,node,FilePath);
+
+        //WordCount wc1 = new WordCount(4,3,FilePath);
+        wc1.manage_partition();
+        wc1.group_by_keys();
+        wc1.showReducedOutput();
 
         System.out.println("\n\n------------------------------------------------------------");
         System.out.println("----------------V 4.1----------------------------");
         System.out.println("------------------------------------------------------------\n\n");
 
-        InMapperWordCount wc = new InMapperWordCount(4,3,FilePath);
+        InMapperWordCount wc = new InMapperWordCount(reducer,node,FilePath);
         wc.manage_partition();
         wc.group_by_keys();
         wc.showReducedOutput();
+
     }
 
 

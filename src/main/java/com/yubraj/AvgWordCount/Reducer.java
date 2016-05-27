@@ -1,6 +1,7 @@
 package com.yubraj.AvgWordCount;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 984886 on 5/26/2016.
@@ -8,26 +9,17 @@ import java.util.ArrayList;
 public class Reducer {
 
     public String key;
-    public ArrayList<Integer> indexList;
+    public ArrayList<List<Integer>> indexList;
 
-    public Reducer(String key) {
-        this.key = key;
-        indexList = new ArrayList<Integer>();
-        addVal();
-    }
 
-    public Reducer(String key, int i) {
+    public Reducer(String key, List<Integer> i) {
         this.key = key;
-        indexList = new ArrayList<Integer>();
+        indexList = new ArrayList<>();
         addVal(i);
     }
 
-    public void addVal(int i) {
+    public void addVal(List<Integer> i) {
         this.indexList.add(i);
-    }
-
-    public void addVal() {
-        this.indexList.add(1);
     }
 
     public String getKey() {
@@ -38,16 +30,17 @@ public class Reducer {
         this.key = key;
     }
 
-    public ArrayList<Integer> getIndexList() {
+    public ArrayList<List<Integer>> getIndexList() {
         return indexList;
     }
 
-    public void setIndexList(ArrayList<Integer> indexList) {
+    public void setIndexList(ArrayList<List<Integer>> indexList) {
         this.indexList = indexList;
     }
 
     @Override
     public String toString() {
+
         return "< " +
                 key +
                 ", " + indexList.toString() +

@@ -7,12 +7,19 @@ import java.io.IOException;
  */
 public class Main {
 
-    static String[] FilePath = { "/home/yubraj_pokharel/big_data_Class/BigData_Classes/testData.txt",
-            "/home/yubraj_pokharel/big_data_Class/BigData_Classes/testData2.txt",
-            "/home/yubraj_pokharel/big_data_Class/BigData_Classes/testData3.txt"
+    public Main() {}
+
+    static String[] FilePath = { "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData.txt",
+            "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData2.txt",
+            "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData3.txt",
+            "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData4.txt"
     };
 
     public static void main(String[] args) throws IOException {
-        Operation o = new Operation(4, 3, FilePath);
+        Operation o = new Operation(3, 4, FilePath);
+        o.manage_partition();
+        o.group_by_keys();
+        o.showReducedOutput();
+
     }
 }
