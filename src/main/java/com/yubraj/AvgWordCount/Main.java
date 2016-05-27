@@ -13,6 +13,8 @@ public class Main {
             "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData2.txt",
             "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData3.txt",
             "/home/yubraj_pokharel/IdeaProjects/BigData_Basics/src/main/testData4.txt"
+
+            
     };
 
     public static void main(String[] args) throws IOException {
